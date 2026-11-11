@@ -1,0 +1,30 @@
+{
+  "name": "organization-management-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Organization Management System",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node run-tests.js",
+    "tunnel": "cloudflared.exe tunnel --url http://localhost:5055",
+    "build:mobile": "node ../scripts/build-mobile-release.js",
+    "release:mobile": "node ../scripts/build-mobile-release.js",
+    "clean:uploads": "node ../scripts/clean-orphaned-uploads.js",
+    "clean:mobile": "cd ../mobile_app && C:\\Users\\mvaru\\flutter\\bin\\flutter.bat clean",
+    "clean": "npm run clean:uploads && npm run clean:mobile"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.18",
+    "archiver": "^5.3.0",
+    "archiver-zip-encryptable": "^1.0.10",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "sqlite3": "^5.1.7",
+    "ws": "^8.21.3"
+  }
+}
